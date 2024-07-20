@@ -1,5 +1,5 @@
 import streamlit as st
-import docx
+
 
 from datetime import datetime
 
@@ -29,13 +29,3 @@ def read_word_file(file_path):
         st.error(f"Đã xảy ra lỗi khi đọc file: {e}")
         return None
 
-# Đường dẫn tới file Word
-file_path = "id.docx"
-
-# Đọc và hiển thị nội dung file Word
-content = read_word_file(file_path)
-if content:
-    st.write("Nội dung file Word:")
-    st.write(content)
-else:
-    st.write("Không thể hiển thị nội dung file Word.")
